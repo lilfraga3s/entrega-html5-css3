@@ -1,18 +1,34 @@
 # Entrega II — CSS3 (Tecnológico)
 
-Projeto: Entrega HTML5 + CSS3 (Design System, Grid 12 col, componentes interativos)
+Projeto: Entrega HTML5 + CSS3  
 Autor: Lil Fraga (@lilfraga3s)
 
-### Como usar
-1. Descompacte e abra `index.html` no navegador.
-2. Para publicar no GitHub Pages, crie um repositório público chamado `entrega-html5` e envie todo o conteúdo.
-3. Link público esperado: https://lilfraga3s.github.io/entrega-html5/
+---
 
-### O que foi incluído
-- Sistema de design com variáveis CSS (tipografia, paleta, espaçamentos).
-- Grid 12-col e 5 breakpoints (responsivo).
-- Menu responsivo (hambúrguer + dropdown).
-- Componentes: cards, badges, botões, formulários estilizados, modais e toasts com animação.
-- JS leve para interações (sem dependências).
+## 🔗 Link Público do GitHub Pages
 
-Valide os arquivos HTML em https://validator.w3.org/ e me avise se quiser ajustes.
+Acesse o projeto online aqui:  
+[https://lilfraga3s.github.io/entrega-html5-css3/](https://lilfraga3s.github.io/entrega-html5-css3/)
+
+---
+
+## 📦 Estrutura do Projeto
+
+entrega-html5-css3/
+│
+├─ index.html
+├─ projetos.html
+├─ cadastro.html
+├─ README.md
+│
+├─ css/
+│ └─ main.css # Sistema de design, tipografia, grid, componentes
+│
+├─ js/
+│ ├─ ui.js # Menu, modais, toasts
+│ └─ masks.js # Máscaras de CPF, telefone e CEP
+│
+└─ img/
+├─ logo.png
+└─ projetos/
+└─ projeto-exemplo.jpg
