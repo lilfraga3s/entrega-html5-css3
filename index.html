@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Organização Exemplo — Início</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="site">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="img/logo.png" alt="Logotipo" width="120"></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="btn-hamburger" aria-expanded="false" aria-controls="nav-list" id="btn-hamburger">
+          <span class="burger-line"></span><span class="sr-only">Abrir menu</span>
+        </button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li class="has-sub">
+            <a href="projetos.html" aria-haspopup="true" aria-expanded="false">Projetos</a>
+            <ul class="sub-menu">
+              <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+              <li><a href="projetos.html#doar">Como doar</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero grid grid-12">
+      <div class="col-7">
+        <h1 class="hero-title">Organização Exemplo — Tecnologia e impacto social</h1>
+        <p class="lead">Construímos soluções e programas para transformar comunidades com dados, pessoas e tecnologia.</p>
+        <div class="actions">
+          <a class="btn primary" href="projetos.html">Conheça os projetos</a>
+          <a class="btn ghost" href="cadastro.html">Quero ajudar</a>
+        </div>
+      </div>
+      <div class="col-5">
+        <figure class="hero-figure">
+          <img src="img/projetos/projeto-exemplo.jpg" alt="Voluntários durante ação social">
+          <figcaption>Voluntários em ação — Projeto Exemplo.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cards-section">
+      <h2>Projetos em destaque</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <img src="img/projetos/projeto-exemplo.jpg" alt="Projeto 1">
+          <div class="card-body">
+            <h3>Alfabetização Digital</h3>
+            <p>Capacitação em habilidades digitais para jovens e adultos.</p>
+            <div class="card-footer">
+              <span class="badge">Tecnologia</span>
+              <button class="btn small" data-open-modal="project1">Saber mais</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/projetos/projeto-exemplo.jpg" alt="Projeto 2">
+          <div class="card-body">
+            <h3>Coleta Inteligente</h3>
+            <p>Sistema de logística para distribuição de alimentos.</p>
+            <div class="card-footer">
+              <span class="badge secondary">Logística</span>
+              <button class="btn small" data-open-modal="project2">Saber mais</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Organização Exemplo — <a href="projetos.html">Projetos Sociais</a></p>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal" id="project1" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="m1-title">
+    <div class="modal-dialog">
+      <button class="modal-close" data-close-modal>&times;<span class="sr-only">Fechar</span></button>
+      <h3 id="m1-title">Alfabetização Digital</h3>
+      <p>Descrição detalhada do projeto Alfabetização Digital e como participar.</p>
+    </div>
+  </div>
+  <div class="modal" id="project2" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="m2-title">
+    <div class="modal-dialog">
+      <button class="modal-close" data-close-modal>&times;<span class="sr-only">Fechar</span></button>
+      <h3 id="m2-title">Coleta Inteligente</h3>
+      <p>Descrição do projeto de logística e distribuição de recursos.</p>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toast-area" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="js/ui.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

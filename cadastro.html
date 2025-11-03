@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro — Organização Exemplo</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="site">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="img/logo.png" alt="Logotipo" width="120"></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="btn-hamburger" aria-expanded="false" aria-controls="nav-list" id="btn-hamburger-3">
+          <span class="burger-line"></span><span class="sr-only">Abrir menu</span>
+        </button>
+        <ul class="nav-list" id="nav-list-3">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Formulário de Cadastro</h1>
+
+    <form id="form-cadastro" class="form" action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Dados pessoais</legend>
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" required minlength="3" maxlength="100" placeholder="Nome completo">
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
+
+        <label for="cpf">CPF</label>
+        <input id="cpf" name="cpf" type="text" inputmode="numeric" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" maxlength="14">
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" inputmode="tel" required placeholder="(00) 00000-0000" maxlength="15">
+
+        <label for="nascimento">Data de nascimento</label>
+        <input id="nascimento" name="nascimento" type="date" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+        <label for="endereco">Endereço</label>
+        <input id="endereco" name="endereco" type="text" required>
+
+        <label for="cep">CEP</label>
+        <input id="cep" name="cep" type="text" inputmode="numeric" required pattern="\d{5}-?\d{3}" placeholder="00000-000" maxlength="9">
+
+        <label for="cidade">Cidade</label>
+        <input id="cidade" name="cidade" type="text" required>
+
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione</option>
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+        </select>
+      </fieldset>
+
+      <button type="submit" class="btn primary">Enviar cadastro</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Organização Exemplo</p>
+    </div>
+  </footer>
+
+  <div id="toast-area" aria-live="polite" aria-atomic="true"></div>
+  <script src="js/masks.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    // Visual validation + toast on submit
+    document.getElementById('form-cadastro').addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!this.checkValidity()){
+        this.reportValidity();
+        showToast('Por favor, corrija os campos em destaque.', 'danger');
+      } else {
+        showToast('Cadastro enviado com sucesso!', 'success');
+      }
+    });
+  </script>
+</body>
+</html>
